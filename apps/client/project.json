@@ -68,6 +68,13 @@
         "lintFilePatterns": ["apps/client/**/*.{ts,tsx,js,jsx}"]
       }
     },
+    "markuplint": {
+      "executor": "nx:run-commands",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "command": "markuplint 'apps/client/src/**/*.{jsx,tsx}' --config='apps/client/.markuplintrc.json'"
+      }
+    },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
